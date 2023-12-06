@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @byvfx
-- 👀 I’m interested in ... vfx and coding
+- 👀 I’m interested in ... vfx and data science
 - 🌱 I’m currently learning ... python
-- 💞️ I’m looking to collaborate on ... open source vfx tools
+- 💞️ I’m looking to collaborate on ... open source vfx tools 
 - 📫 How to reach me ... brandon@byvfx.com
 
 <!---
