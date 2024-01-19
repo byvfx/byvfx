@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @byvfx
-- 👀 I’m interested in ... vfx and data science
-- 🌱 I’m currently learning ... python
-- 📫 How to reach me ... brandon@byvfx.com
+- 👀 I’m interested in vfx and data science
+- 👨‍💻 I’m always learning something new
+- 📫 How to reach me brandon@byvfx.com
 
 <!---
 byvfx/byvfx is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
