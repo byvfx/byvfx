@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @byvfx
-- 👀 I’m interested in vfx and data science
+- 👀 I’m interested in VFX, data science and dabble in ML now and then
 - 👨‍💻 I’m always learning something new
 - 📫 How to reach me brandon@byvfx.com
 
