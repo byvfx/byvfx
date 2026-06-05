@@ -1,26 +1,18 @@
-I make things move — sometimes pixels, sometimes data.
-By trade, I’m a VFX Artist and Technical Generalist, but over the years I’ve turned that curiosity into coding, tools, and a fair bit of backend wizardry.
+### Brandon
 
-Python is my go-to for building tools, automating workflows, and experimenting with ML.
+VFX artist and technical generalist. I move pixels for a living and data on the side.
 
-Go is my favorite sidekick — I use it to craft clean, fast CLIs and backend services.
+Mostly, I build tools. Python for pipeline work, automation, and ML experiments. Go when I want something fast and small — or when I've decided, for reasons that hold up under no scrutiny, to rewrite a working tool again.
 
-VFX Tools: Houdini, Unreal Engine, and  Godot
+**Working in:** Houdini, Unreal, Godot
+**Tinkering with:** procedural systems, the occasional game prototype
+**Currently building:** BIF, a USD-native scene assembler
 
-Tinker Zone: procedural systems, and the occasional game prototype.
+- Email: brandon@byvfx.com
+- GitHub: [@byvfx](https://github.com/byvfx)
 
-Currently Building Bif a susf native scene assembler
+If it glows, explodes, or involves code, I'm probably into it.
 
-Always learning something new — whether it’s a new algorithm, a better shader trick, or another excuse to rewrite the same tool in Go “for performance reasons.”
-
-✉️ Let’s Connect
-
-Email: brandon@byvfx.com
-
-GitHub: @byvfx
-
-(If it glows, explodes, or involves code — I’m probably into it.)
 <!---
-byvfx/byvfx is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
+byvfx/byvfx is a special repository because its README.md appears on your GitHub profile.
 --->
