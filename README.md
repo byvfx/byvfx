@@ -2,7 +2,7 @@
 
 VFX artist and technical generalist. I move pixels for a living and data on the side.
 
-Mostly, I build tools. Python for pipeline work, automation, and ML experiments. Go when I want something fast and small — or when I've decided, for reasons that hold up under no scrutiny, to rewrite a working tool again.
+Mostly, I build tools. Python for pipeline work, and automation.
 
 **Working in:** Houdini, Unreal, Godot
 **Tinkering with:** procedural systems, the occasional game prototype
