@@ -1,12 +1,4 @@
-### Brandon
-
-VFX artist and technical generalist. I move pixels for a living and data on the side.
-
-Mostly, I build tools. Python for pipeline work, and automation.
-
-**Working in:** Houdini, Unreal, Godot
-**Tinkering with:** procedural systems, the occasional game prototype
-**Currently building:** BIF, a USD-native scene assembler
+**Currently building:** BIF, a USD-native scene assembler, Floki, GPU accelerated EXR viewer that eventually will be the 2d/color engine for BIF
 
 - Email: brandon@byvfx.com
 - GitHub: [@byvfx](https://github.com/byvfx)
