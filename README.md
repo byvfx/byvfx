@@ -1,5 +1,3 @@
-### Brandon
-
 VFX artist and technical generalist. I build the tools between the pixels and the pipeline.
 
 Python for tooling, automation, and ML. Go for fast CLIs and backend services. Rust where it earns its place.
