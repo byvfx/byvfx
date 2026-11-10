@@ -4,13 +4,11 @@
 
 ### About me
 
-Hi, I'm Brandon. I build tools. It started in VFX, writing the scripts between the pixels and the pipeline, and it never stopped: EXR viewers, scene assemblers, sync CLIs, and whole pipelines that run unattended on a NAS.
+I'm a tool builder with a background in VFX. I design and build software for media and production work: image viewers, scene assembly, command-line utilities, and automated pipelines that run unattended.
 
-I like tools that install cleanly, say what's wrong when something breaks, and keep working when nobody is watching.
+My focus is on tools that are simple to deploy, clear about their failures, and reliable in daily use.
 
 Python for tooling, automation, and ML. Go for fast CLIs and backend services. Rust where it earns its place.
-
-If it glows, explodes, or involves code, I'm probably into it.
 
 <p align="center"><img src="assets/construction.svg" width="100%" alt="under construction"></p>
 
