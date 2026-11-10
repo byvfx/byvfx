@@ -4,9 +4,11 @@
 
 ### About me
 
-Hi, I'm Brandon, a VFX artist and technical generalist in Las Vegas. I make shots, and I build the tools around them: viewers, converters, pipeline glue, and now and then a renderer written just to see how one works.
+Hi, I'm Brandon. I build tools. It started in VFX, writing the scripts between the pixels and the pipeline, and it never stopped: EXR viewers, scene assemblers, sync CLIs, and whole pipelines that run unattended on a NAS.
 
-Python for tooling, automation, and ML. Go for fast CLIs and backend services. Rust where it earns its place. Houdini, Unreal and Godot for the pictures.
+I like tools that install cleanly, say what's wrong when something breaks, and keep working when nobody is watching.
+
+Python for tooling, automation, and ML. Go for fast CLIs and backend services. Rust where it earns its place.
 
 If it glows, explodes, or involves code, I'm probably into it.
 
