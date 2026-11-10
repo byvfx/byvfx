@@ -8,8 +8,6 @@ I'm a tool builder with a background in VFX. I design and build software for med
 
 My focus is on tools that are simple to deploy, clear about their failures, and reliable in daily use.
 
-Python for tooling, automation, and ML. Go for fast CLIs and backend services. Rust where it earns its place.
-
 <p align="center"><img src="assets/construction.svg" width="100%" alt="under construction"></p>
 
 ### What's new
