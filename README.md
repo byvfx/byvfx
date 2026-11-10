@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="byvfx: Brandon Young's home page. VFX artist and technical generalist. I build the tools between the pixels and the pipeline.">
+  <img src="assets/header.svg" width="100%" alt="byvfx: Brandon Young's home page. VFX artist and technical generalist. I like building things.">
 </p>
 
 ### About me

@@ -70,7 +70,7 @@
   <text class="word" x="416" y="140" fill="#00e5ff">BYVFX</text>
   <text class="word" x="420" y="142" fill="#fff">BYVFX</text>
   <text class="mono mid" x="420" y="174" font-size="14" fill="#c0c0c0">Brandon Young · VFX artist and technical generalist</text>
-  <text class="mono mid" x="420" y="191" font-size="12" fill="#00ff66">I build the tools between the pixels and the pipeline.</text>
+  <text class="mono mid" x="420" y="191" font-size="12" fill="#00ff66">I like building things.</text>
 
   <!-- status bar marquee -->
   <g clip-path="url(#status)">
