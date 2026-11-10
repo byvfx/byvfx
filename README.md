@@ -1,17 +1,57 @@
-VFX artist and technical generalist. I build the tools between the pixels and the pipeline.
+<p align="center">
+  <img src="assets/header.svg" width="100%" alt="byvfx: Brandon Young's home page. VFX artist and technical generalist. I build the tools between the pixels and the pipeline.">
+</p>
 
-Python for tooling, automation, and ML. Go for fast CLIs and backend services. Rust where it earns its place.
+### About me
 
-**Working in:** Houdini, Unreal, Godot
-**Currently building:**
-- **BIF** — a USD-native scene assembler
-- **Floki** — a GPU-accelerated EXR viewer, eventually the 2D/color engine for BIF
+Hi, I'm Brandon, a VFX artist and technical generalist in Las Vegas. I make shots, and I build the tools around them: viewers, converters, pipeline glue, and now and then a renderer written just to see how one works.
 
-- Email: brandon@byvfx.com
-- Web: [byvfx.com](https://byvfx.com)
+Python for tooling, automation, and ML. Go for fast CLIs and backend services. Rust where it earns its place. Houdini, Unreal and Godot for the pictures.
 
 If it glows, explodes, or involves code, I'm probably into it.
 
-<!---
-byvfx/byvfx is a special repository because its README.md appears on your GitHub profile.
---->
+<p align="center"><img src="assets/construction.svg" width="100%" alt="under construction"></p>
+
+### What's new
+
+- <img src="assets/new.svg" alt="new" height="13"> **[Clippa](https://github.com/byvfx/clipper)**: a stream clipping pipeline that records, transcribes, scores, cuts, reviews and publishes
+- <img src="assets/new.svg" alt="new" height="13"> **[Floki](https://github.com/byvfx/floki)**: a GPU-accelerated EXR viewer, eventually the 2D/color engine for BIF
+- <img src="assets/new.svg" alt="new" height="13"> **[comfyless](https://github.com/byvfx/comfyless)**: run ComfyUI workflows on cloud GPUs in your own Modal account
+- **[BIF](https://github.com/byvfx/bif)**: a USD-native scene assembler
+- **[go-notion-md-sync](https://github.com/byvfx/go-notion-md-sync)**: Notion pages and markdown files, kept in step
+
+### Made with
+
+<p>
+  <img src="assets/houdini.svg" alt="made with Houdini" width="88" height="31">
+  <img src="assets/python.svg" alt="powered by Python" width="88" height="31">
+  <img src="assets/rust.svg" alt="written in Rust" width="88" height="31">
+  <img src="assets/go.svg" alt="gotta Go fast" width="88" height="31">
+  <img src="assets/usd.svg" alt="100% USD native" width="88" height="31">
+  <img src="assets/exr.svg" alt="OpenEXR now!" width="88" height="31">
+</p>
+
+### Links
+
+<p>
+  <a href="https://byvfx.com"><img src="assets/byvfx.svg" alt="byvfx.com" width="88" height="31"></a>
+  <a href="mailto:brandon@byvfx.com"><img src="assets/email.svg" alt="e-mail me" width="88" height="31"></a>
+  <a href="https://github.com/byvfx?tab=repositories"><img src="assets/counter.svg" alt="public repos counter" width="88" height="31"></a>
+  <img src="assets/fps.svg" alt="best viewed at 24 fps" width="88" height="31">
+</p>
+
+### Guestbook
+
+<a href="https://github.com/byvfx/byvfx/issues/new?title=guestbook%3A+your+message+here"><img src="assets/guestbook.svg" alt="sign my guestbook" width="88" height="31"></a>
+
+<!-- guestbook:start -->
+- *no signatures yet: be the first*
+<!-- guestbook:end -->
+
+<p align="center"><img src="assets/construction.svg" width="100%" alt=""></p>
+
+<p align="center"><sub>
+  <a href="https://github.com/byvfx/floki">← floki</a>
+  &nbsp;·&nbsp; the byvfx webring &nbsp;·&nbsp;
+  <a href="https://github.com/byvfx/bif">bif →</a>
+</sub></p>

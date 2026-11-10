@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="14" viewBox="0 0 840 14" role="img">
+  <title>under construction</title>
+  <defs>
+    <pattern id="tape" width="28" height="14" patternUnits="userSpaceOnUse" patternTransform="skewX(-45)">
+      <rect width="14" height="14" fill="#ffd400"/>
+      <rect x="14" width="14" height="14" fill="#111"/>
+    </pattern>
+  </defs>
+  <style>
+    .tape { animation: roll 1.6s linear infinite; }
+    @keyframes roll { to { transform: translateX(28px); } }
+    @media (prefers-reduced-motion: reduce) { .tape { animation: none; } }
+  </style>
+  <rect class="tape" x="-28" width="896" height="14" fill="url(#tape)"/>
+  <rect x="320" y="1" width="200" height="12" fill="#111"/>
+  <text x="420" y="10.5" font-size="9" font-weight="bold" fill="#ffd400" text-anchor="middle" letter-spacing="2" style="font-family:Verdana,Geneva,'DejaVu Sans',sans-serif">UNDER CONSTRUCTION</text>
+</svg>
