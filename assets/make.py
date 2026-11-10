@@ -54,6 +54,7 @@ button("usd", "USD native", "#000080", "#ffffff", "100%", "NATIVE", ("#c0c0c0", 
 button("exr", "OpenEXR now!", "#c0c0c0", "#000000", "OpenEXR", "NOW!", ("#000", "#00ff66", "EXR"), blink=True, l2fill="#c00000")
 button("fps", "best viewed at 24 fps", "#000000", "#00ff66", "best viewed", "at 24 fps")
 button("email", "e-mail me", "#008080", "#ffffff", "e-mail", "ME!", ("#ffffff", "#008080", "@"))
+button("kofi", "buy me a coffee on Ko-fi", "#ff5e5b", "#ffffff", "buy me a", "COFFEE", ("#ffffff", "#ff5e5b", "Ko"))
 button("guestbook", "sign my guestbook", "#ffffff", "#0000cc", "sign my", "guestbook", ("#ffea00", "#000", "!"))
 
 # the name plate

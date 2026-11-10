@@ -34,6 +34,7 @@ My focus is on tools that are simple to deploy, clear about their failures, and 
 <p>
   <a href="https://byvfx.com"><img src="assets/byvfx.svg" alt="byvfx.com" width="88" height="31"></a>
   <a href="mailto:brandon@byvfx.com"><img src="assets/email.svg" alt="e-mail me" width="88" height="31"></a>
+  <a href="https://ko-fi.com/byvfx"><img src="assets/kofi.svg" alt="buy me a coffee on Ko-fi" width="88" height="31"></a>
   <a href="https://github.com/byvfx?tab=repositories"><img src="assets/counter.svg" alt="public repos counter" width="88" height="31"></a>
   <img src="assets/fps.svg" alt="best viewed at 24 fps" width="88" height="31">
 </p>
