@@ -1,9 +1,26 @@
-"""Draw the 88x31 buttons: python assets/make.py assets <public repo count>."""
+"""Draw the 88x31 buttons.
+
+    python assets/make.py assets <public repo count>
+    python assets/make.py assets <public repo count> --counter-only
+
+--counter-only rewrites counter.svg and leaves the other buttons alone.
+The weekly counter Action uses that. With no count, the odometer keeps the
+number already in counter.svg instead of a baked-in default.
+"""
 import sys
 from pathlib import Path
 
-OUT = Path(sys.argv[1])
+args = sys.argv[1:]
+only_counter = False
+if args and args[-1] == "--counter-only":
+    only_counter = True
+    args = args[:-1]
+if not args:
+    sys.exit("usage: python assets/make.py <dir> <public repo count> [--counter-only]")
+
+OUT = Path(args[0])
 OUT.mkdir(parents=True, exist_ok=True)
+COUNT = int(args[1]) if len(args) > 1 else None
 
 FONT = "Verdana, Geneva, 'DejaVu Sans', sans-serif"
 STYLE = (
@@ -46,27 +63,51 @@ def button(name, title, bg, fg, l1, l2, block=None, blink=False, l2fill=None):
     (OUT / f"{name}.svg").write_text(frame(bg, body, title), encoding="utf-8")
 
 
-button("houdini", "made with Houdini", "#1a1a1a", "#ffffff", "made with", "HOUDINI", ("#ff4713", "#fff", "H"))
-button("python", "powered by Python", "#ffd43b", "#1e3a5f", "powered by", "PYTHON", ("#306998", "#ffd43b", "Py"))
-button("rust", "written in Rust", "#2b1d16", "#f4c9a8", "written in", "RUST", ("#ce422b", "#fff", "Rs"))
-button("go", "gotta Go fast", "#00add8", "#ffffff", "gotta", "GO FAST", ("#ffffff", "#00add8", "Go"))
-button("usd", "USD native", "#000080", "#ffffff", "100%", "NATIVE", ("#c0c0c0", "#000080", "USD"))
-button("exr", "OpenEXR now!", "#c0c0c0", "#000000", "OpenEXR", "NOW!", ("#000", "#00ff66", "EXR"), blink=True, l2fill="#c00000")
-button("fps", "best viewed at 24 fps", "#000000", "#00ff66", "best viewed", "at 24 fps")
-button("email", "e-mail me", "#008080", "#ffffff", "e-mail", "ME!", ("#ffffff", "#008080", "@"))
-button("kofi", "buy me a coffee on Ko-fi", "#ff5e5b", "#ffffff", "buy me a", "COFFEE", ("#ffffff", "#ff5e5b", "Ko"))
-button("guestbook", "sign my guestbook", "#ffffff", "#0000cc", "sign my", "guestbook", ("#ffea00", "#000", "!"))
+def draw_buttons():
+    button("houdini", "made with Houdini", "#1a1a1a", "#ffffff", "made with", "HOUDINI", ("#ff4713", "#fff", "H"))
+    button("python", "powered by Python", "#ffd43b", "#1e3a5f", "powered by", "PYTHON", ("#306998", "#ffd43b", "Py"))
+    button("rust", "written in Rust", "#2b1d16", "#f4c9a8", "written in", "RUST", ("#ce422b", "#fff", "Rs"))
+    button("go", "gotta Go fast", "#00add8", "#ffffff", "gotta", "GO FAST", ("#ffffff", "#00add8", "Go"))
+    button("usd", "USD native", "#000080", "#ffffff", "100%", "NATIVE", ("#c0c0c0", "#000080", "USD"))
+    button("exr", "OpenEXR now!", "#c0c0c0", "#000000", "OpenEXR", "NOW!", ("#000", "#00ff66", "EXR"), blink=True, l2fill="#c00000")
+    button("fps", "best viewed at 24 fps", "#000000", "#00ff66", "best viewed", "at 24 fps")
+    button("email", "e-mail me", "#008080", "#ffffff", "e-mail", "ME!", ("#ffffff", "#008080", "@"))
+    button("kofi", "buy me a coffee on Ko-fi", "#ff5e5b", "#ffffff", "buy me a", "COFFEE", ("#ffffff", "#ff5e5b", "Ko"))
+    button("guestbook", "sign my guestbook", "#ffffff", "#0000cc", "sign my", "guestbook", ("#ffea00", "#000", "!"))
 
-# the name plate
-body = (
-    '<text x="44" y="17" font-size="14" font-weight="bold" fill="#ff7a00" letter-spacing="1">BYVFX</text>'
-    '<text x="44" y="26" font-size="7" fill="#c0c0c0">las vegas, nv</text>'
-)
-(OUT / "byvfx.svg").write_text(frame("#000000", body, "byvfx"), encoding="utf-8")
+    # the name plate
+    body = (
+        '<text x="44" y="17" font-size="14" font-weight="bold" fill="#ff7a00" letter-spacing="1">BYVFX</text>'
+        '<text x="44" y="26" font-size="7" fill="#c0c0c0">las vegas, nv</text>'
+    )
+    (OUT / "byvfx.svg").write_text(frame("#000000", body, "byvfx"), encoding="utf-8")
+
+
+def current_count():
+    """The number already drawn on counter.svg, if the title is intact."""
+    path = OUT / "counter.svg"
+    if not path.exists():
+        return None
+    text = path.read_text(encoding="utf-8")
+    start = text.find("<title>")
+    end = text.find(" public repos</title>", start)
+    if start < 0 or end < 0:
+        return None
+    raw = text[start + len("<title>") : end]
+    return int(raw) if raw.isdigit() else None
 
 
 def counter(n):
-    """An odometer: the number of public repos, six digits."""
+    """An odometer: the number of public repos, six digits.
+
+    Returns True when the file was written. A counter-only run that already
+    shows this number leaves the file untouched, so the Action commits only
+    when the count changes.
+    """
+    dest = OUT / "counter.svg"
+    title = f"{n} public repos"
+    if only_counter and dest.exists() and f"<title>{title}</title>" in dest.read_text(encoding="utf-8"):
+        return False
     digits = f"{n:06d}"
     body = '<text x="44" y="11" font-size="7" fill="#c0c0c0">public repos</text>'
     for i, d in enumerate(digits):
@@ -76,10 +117,21 @@ def counter(n):
             f'<text x="{x + 5.5}" y="24.5" font-size="10" font-weight="bold" fill="#00ff66" '
             f"style=\"font-family:'Courier New',monospace\">{d}</text>"
         )
-    (OUT / "counter.svg").write_text(frame("#2a2a2a", body, f"{n} public repos"), encoding="utf-8")
+    dest.write_text(frame("#2a2a2a", body, title), encoding="utf-8")
+    return True
 
 
-counter(int(sys.argv[2]) if len(sys.argv) > 2 else 37)
+if COUNT is None:
+    COUNT = current_count()
+if COUNT is None:
+    sys.exit("pass the public repo count: python assets/make.py <dir> <count>")
+
+if only_counter:
+    print("counter unchanged" if not counter(COUNT) else f"counter {COUNT}")
+    sys.exit(0)
+
+draw_buttons()
+counter(COUNT)
 
 # NEW! tag for the what's-new list
 (OUT / "new.svg").write_text(
