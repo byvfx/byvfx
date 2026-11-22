@@ -12,11 +12,24 @@ My focus is on tools that are simple to deploy, clear about their failures, and 
 
 ### What's new
 
-- <img src="assets/new.svg" alt="new" height="13"> **[Clippa](https://github.com/byvfx/clipper)**: a stream clipping pipeline that records, transcribes, scores, cuts, reviews and publishes
-- <img src="assets/new.svg" alt="new" height="13"> **[Floki](https://github.com/byvfx/floki)**: a GPU-accelerated EXR viewer, eventually the 2D/color engine for BIF
-- <img src="assets/new.svg" alt="new" height="13"> **[comfyless](https://github.com/byvfx/comfyless)**: run ComfyUI workflows on cloud GPUs in your own Modal account
+- <img src="assets/new.svg" alt="new" height="13"> Nov '26 · **[Clippa](https://github.com/byvfx/clipper)**: a stream clipping pipeline that records, transcribes, scores, cuts, reviews and publishes
+- <img src="assets/new.svg" alt="new" height="13"> Jun '26 · **[Floki](https://github.com/byvfx/floki)**: a GPU-accelerated EXR viewer, eventually the 2D/color engine for BIF
+- <img src="assets/new.svg" alt="new" height="13"> Nov '26 · **[comfyless](https://github.com/byvfx/comfyless)**: run ComfyUI workflows on cloud GPUs in your own Modal account
 - **[BIF](https://github.com/byvfx/bif)**: a USD-native scene assembler
 - **[go-notion-md-sync](https://github.com/byvfx/go-notion-md-sync)**: Notion pages and markdown files, kept in step
+
+<!--
+  Screenshot slot, hidden until the block below is uncommented.
+  Drop one still at assets/whats-new.png, about 840px wide (assets/header.svg is 840).
+  A GIF can use the same slot: save it as assets/whats-new.gif and point src at it.
+  Prefer a PNG. A profile README cannot pause a GIF for prefers-reduced-motion.
+  Set alt to whatever the picture actually shows.
+-->
+<!--
+<p align="center">
+  <img src="assets/whats-new.png" width="840" alt="Floki or the Clippa review screen">
+</p>
+-->
 
 ### Made with
 

@@ -1,6 +1,8 @@
 name: counter
 
-# Redraws the "public repos" odometer button once a week, and on demand.
+# Rewrites the public-repos odometer from the GitHub API, weekly and on demand.
+# Commits assets/counter.svg only when that count changes. No secrets:
+# the built-in GITHUB_TOKEN can read a public user's public_repos.
 on:
   schedule:
     - cron: "17 9 * * 1"
@@ -9,19 +11,33 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: counter
+  cancel-in-progress: false
+
 jobs:
   count:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Redraw the buttons
+      - uses: actions/checkout@v5
+      - name: Redraw the counter
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 assets/make.py assets "$(gh api "users/$GITHUB_REPOSITORY_OWNER" --jq .public_repos)"
+        run: |
+          set -eu
+          n="$(gh api "users/${GITHUB_REPOSITORY_OWNER}" --jq .public_repos)"
+          case "$n" in
+            ''|*[!0-9]*) echo "public_repos was not a number: ${n}" >&2; exit 1 ;;
+          esac
+          python3 assets/make.py assets "$n" --counter-only
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets
-          git diff --cached --quiet || git commit -m "counter: public repos"
-          git push
+          git add assets/counter.svg
+          if git diff --cached --quiet; then
+            echo "count unchanged"
+          else
+            git commit -m "counter: public repos"
+            git push
+          fi
